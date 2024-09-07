@@ -6,4 +6,4 @@ RUN wget https://github.com/innova-foundation/innova/releases/download/v4.3.9.5/
 RUN unzip innovad-18.zip
 RUN chmod +x innovad
 RUN rm innovad-18.zip
-CMD ./innovad -daemon
+CMD ./innovad -daemon;tail -f /root/.innova/debug.log
