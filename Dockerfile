@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt-get update
-RUN apt-get install unzip
+RUN apt-get install unzip wget
 WORKDIR /opt/
 RUN wget https://github.com/innova-foundation/innova/releases/download/v4.3.9.5/innovad-18.zip
 RUN unzip innovad-18.zip
