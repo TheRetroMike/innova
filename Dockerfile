@@ -6,6 +6,10 @@ RUN wget https://github.com/innova-foundation/innova/releases/download/v4.3.9.5/
 RUN unzip innovad-18.zip
 RUN chmod +x innovad
 RUN rm innovad-18.zip
+RUN mv innovad /usr/bin
 RUN wget https://raw.githubusercontent.com/TheRetroMike/rmt-nomp/master/scripts/blocknotify.c
 RUN gcc blocknotify.c -o /usr/bin/blocknotify
-CMD ./innovad -daemon;tail -f /root/.innova/debug.log
+#CMD ./innovad -daemon;tail -f /root/.innova/debug.log
+#CMD ./innovad -printtoconsole
+#CMD ["/innovad", "-printtoconsole"]
+CMD /usr/bin/innovad -printtoconsole
